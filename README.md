@@ -12,6 +12,8 @@ Users will have ability to buy subscriptions for variety of goods like products,
 
 **staging** - staging branch for testing
 
+**develop** - development branch for synchronization
+
 **dev/\<name\>** - Development branches, where **\<name\>** is member's name
 
 ### Flow:
@@ -24,5 +26,6 @@ Users will have ability to buy subscriptions for variety of goods like products,
        npm run lint
    ```
 3. Commit changes and push them to the remote
-4. If task is done, merge your branch to **staging** branch, preview will be deployed automatically
-5. If everything is ok - merge **staging** to **master** branch
+4. If task is done, merge your branch to **develop** branch for synchronization between other branches
+5. From time to time **develop** branch will be merged with **staging** branch for testing and preview will be deployed automatically
+6. If everything is ok, **staging** will be merged to **master** branch and application will be deployed to production
